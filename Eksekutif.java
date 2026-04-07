@@ -1,12 +1,12 @@
 public class Eksekutif extends Tiket {
 
-    public Eksekutif(String nama, String tujuan, double hargaDasar) {
-        super(nama, tujuan, hargaDasar);
+    public Eksekutif(String namaKereta, String nama, String tujuan, double hargaDasar) {
+        super(namaKereta, nama, tujuan, hargaDasar);
     }
 
     @Override
     public double hitungHarga() {
-        return hargaDasar + (hargaDasar * 0.5);
+        return getHargaDasar() + (getHargaDasar() * 0.5);
     }
 
     @Override

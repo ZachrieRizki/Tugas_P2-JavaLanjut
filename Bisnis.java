@@ -1,12 +1,12 @@
 public class Bisnis extends Tiket {
 
-    public Bisnis(String nama, String tujuan, double hargaDasar) {
-        super(nama, tujuan, hargaDasar);
+    public Bisnis(String namaKereta, String nama, String tujuan, double hargaDasar) {
+        super(namaKereta, nama, tujuan, hargaDasar);
     }
 
     @Override
     public double hitungHarga() {
-        return hargaDasar + (hargaDasar * 0.2);
+        return getHargaDasar() + (getHargaDasar() * 0.2);
     }
 
     @Override

@@ -1,17 +1,31 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
 
-        Tiket t1 = new Ekonomi("Zachrie", "Bandung", 100000);
-        Tiket t2 = new Bisnis("Rizki", "Jakarta", 150000);
-        Tiket t3 = new Eksekutif("Chandra", "Surabaya", 200000);
+        //1. DATA KERETA (LIST)
+        List<Tiket> daftarTiket = new ArrayList<>();
 
-        System.out.println("=== Tiket 1 ===");
-        t1.tampilInfo();
+        daftarTiket.add(new Ekonomi("KA Ekonomi", "Zachrie", "Bandung", 100000));
+        daftarTiket.add(new Bisnis("KA Bisnis", "Rizki", "Jakarta", 150000));
+        daftarTiket.add(new Eksekutif("KA Eksekutif", "Chandra", "Surabaya", 200000));
 
-        System.out.println("\n=== Tiket 2 ===");
-        t2.tampilInfo();
+        //2. Tampilkan Daftar Kereta
+        System.out.println("=== DAFTAR KERETA ===");
+        for (int i = 0; i < daftarTiket.size(); i++) {
+            System.out.println((i + 1) + ". " + daftarTiket.get(i).getNamaKereta());
+        }
 
-        System.out.println("\n=== Tiket 3 ===");
-        t3.tampilInfo();
+        //3. simulasi pilihan
+        int pilihan = 2;
+
+        //4. ambil tiket dari list
+        Tiket tiketDipilih = daftarTiket.get(pilihan - 1);
+
+        //5. Tampilkan Detail Tiket
+        System.out.println("\n=== DETAIL TIKET ===");
+        tiketDipilih.tampilInfo();
+
     }
 }

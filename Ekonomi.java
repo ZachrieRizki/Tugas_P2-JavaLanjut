@@ -1,12 +1,12 @@
 public class Ekonomi extends Tiket {
 
-    public Ekonomi(String nama, String tujuan, double hargaDasar) {
-        super(nama, tujuan, hargaDasar);
+    public Ekonomi(String namaKereta, String nama, String tujuan, double hargaDasar) {
+        super(namaKereta, nama, tujuan, hargaDasar);
     }
 
     @Override
     public double hitungHarga() {
-        return hargaDasar;
+        return getHargaDasar();
     }
 
     @Override
@@ -16,3 +16,4 @@ public class Ekonomi extends Tiket {
         System.out.println("Harga: " + hitungHarga());
     }
 }
+
