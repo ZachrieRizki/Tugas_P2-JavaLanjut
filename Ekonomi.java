@@ -1,7 +1,7 @@
 public class Ekonomi extends Tiket {
 
-    public Ekonomi(String namaKereta, String nama, String tujuan, double hargaDasar) {
-        super(namaKereta, nama, tujuan, hargaDasar);
+    public Ekonomi(String namaKereta, String nama, String tujuan) {
+        super(namaKereta, nama, tujuan);
     }
 
     @Override

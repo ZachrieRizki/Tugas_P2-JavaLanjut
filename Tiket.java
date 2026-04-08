@@ -1,14 +1,25 @@
+import java.util.HashMap;
+import java.util.Map;
+
+
 public abstract class Tiket implements Tickettable {
+   
     private String namaKereta;
     private String namaPenumpang;
     private String tujuan;
-    private double hargaDasar;
 
-    public Tiket(String namaKereta, String namaPenumpang, String tujuan, double hargaDasar) {
+    protected static Map<String, Double> hargaMap = new HashMap<>();
+
+    static {
+        hargaMap.put("Bandung", 100000.0);
+        hargaMap.put("Jakarta", 150000.0);
+        hargaMap.put("Surabaya", 200000.0);
+    }
+
+    public Tiket(String namaKereta, String namaPenumpang, String tujuan) {
         this.namaKereta = namaKereta;
         this.namaPenumpang = namaPenumpang;
         this.tujuan = tujuan;
-        this.hargaDasar = hargaDasar;
     }
 
     // Encapsulation (getter)
@@ -25,7 +36,7 @@ public abstract class Tiket implements Tickettable {
     }
 
     public double getHargaDasar() {
-        return hargaDasar; 
+        return hargaMap.getOrDefault(tujuan, 120000.0); 
     }
 
     // Abstraction

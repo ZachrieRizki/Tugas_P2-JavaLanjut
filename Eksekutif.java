@@ -1,7 +1,7 @@
 public class Eksekutif extends Tiket {
 
-    public Eksekutif(String namaKereta, String nama, String tujuan, double hargaDasar) {
-        super(namaKereta, nama, tujuan, hargaDasar);
+    public Eksekutif(String namaKereta, String nama, String tujuan) {
+        super(namaKereta, nama, tujuan);
     }
 
     @Override

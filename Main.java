@@ -4,14 +4,14 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-        //1. DATA KERETA (LIST)
+        //1. list kerera
         List<Tiket> daftarTiket = new ArrayList<>();
 
-        daftarTiket.add(new Ekonomi("KA Ekonomi", "Zachrie", "Bandung", 100000));
-        daftarTiket.add(new Bisnis("KA Bisnis", "Rizki", "Jakarta", 150000));
-        daftarTiket.add(new Eksekutif("KA Eksekutif", "Chandra", "Surabaya", 200000));
+        daftarTiket.add(new Ekonomi("KA Ekonomi", "Zachrie", "Bandung"));
+        daftarTiket.add(new Bisnis("KA Bisnis", "Rizki", "Jakarta"));
+        daftarTiket.add(new Eksekutif("KA Eksekutif", "Chandra", "Surabaya"));
 
-        //2. Tampilkan Daftar Kereta
+        //2. nampilin daftarkereta
         System.out.println("=== DAFTAR KERETA ===");
         for (int i = 0; i < daftarTiket.size(); i++) {
             System.out.println((i + 1) + ". " + daftarTiket.get(i).getNamaKereta());
@@ -21,7 +21,7 @@ public class Main {
         int pilihan = 2;
 
         //4. ambil tiket dari list
-        Tiket tiketDipilih = daftarTiket.get(pilihan - 1);
+        Tiket tiketDipilih = daftarTiket.get(pilihan);
 
         //5. Tampilkan Detail Tiket
         System.out.println("\n=== DETAIL TIKET ===");

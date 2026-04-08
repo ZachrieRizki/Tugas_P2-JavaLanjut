@@ -1,7 +1,7 @@
 public class Bisnis extends Tiket {
 
-    public Bisnis(String namaKereta, String nama, String tujuan, double hargaDasar) {
-        super(namaKereta, nama, tujuan, hargaDasar);
+    public Bisnis(String namaKereta, String nama, String tujuan) {
+        super(namaKereta, nama, tujuan);
     }
 
     @Override
