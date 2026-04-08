@@ -18,7 +18,7 @@ public class Main {
         }
 
         //3. simulasi pilihan
-        int pilihan = 2;
+        int pilihan = 0;
 
         //4. ambil tiket dari list
         Tiket tiketDipilih = daftarTiket.get(pilihan);
