@@ -17,15 +17,17 @@ public class Main {
             System.out.println((i + 1) + ". " + daftarTiket.get(i).getNamaKereta());
         }
 
-        //3. simulasi pilihan
-        int pilihan = 0;
+        int pilihan = 5;
 
-        //4. ambil tiket dari list
-        Tiket tiketDipilih = daftarTiket.get(pilihan);
+        try {
+            Tiket tiketDipilih = daftarTiket.get(pilihan);
 
-        //5. Tampilkan Detail Tiket
-        System.out.println("\n=== DETAIL TIKET ===");
-        tiketDipilih.tampilInfo();
-
+            System.out.println("=== TIKET DIPILIH ===");
+            tiketDipilih.tampilInfo();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+  
+   
     }
 }
